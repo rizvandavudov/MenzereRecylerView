@@ -61,6 +61,7 @@ class ManzaraAdapter(tumManzaralar: ArrayList<Manzara>) :
             manzaraAciklama.text = oanOlanManzara.aciklama
             manzaraResim.setImageResource(oanOlanManzara.resim)
 
+
             btnKopyala.setOnClickListener {
                 manzaralar.add(position, oanOlanManzara)
                 notifyItemInserted(position)
@@ -82,5 +83,17 @@ class ManzaraAdapter(tumManzaralar: ArrayList<Manzara>) :
             }
         }
     }
+
+    fun deleteItem(i: Int) {
+        manzaralar.removeAt(i)
+        notifyDataSetChanged()
+    }
+
+    fun addItem(i: Int, oanOlanManzara: Manzara) {
+        manzaralar.add(i, oanOlanManzara)
+        notifyDataSetChanged()
+
+    }
+
 
 }

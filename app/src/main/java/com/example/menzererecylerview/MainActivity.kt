@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -28,6 +29,26 @@ class MainActivity : AppCompatActivity() {
 
         var linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewManzara.layoutManager = linearLayoutManager
+
+        val swipeGesture = object : SwipeGesture() {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                when (direction) {
+
+                    ItemTouchHelper.LEFT -> {
+                        myAdapter.deleteItem(viewHolder.adapterPosition)
+                    }
+
+                    ItemTouchHelper.RIGHT -> {
+                        val position = viewHolder.adapterPosition
+                        val archiveItem = tumManzaralar[position]
+                        myAdapter.addItem(position + 1, archiveItem.copy())
+                        myAdapter.notifyItemInserted(position + 1)
+                    }
+                }
+            }
+        }
+        val itemTouchHelper = ItemTouchHelper(swipeGesture)
+        itemTouchHelper.attachToRecyclerView(recyclerViewManzara)
 
     }
 
