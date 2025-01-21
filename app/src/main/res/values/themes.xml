@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MenzereRecylerView" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#2196F3</item> <!-- Toolbar üçün əsas rəng -->
+        <item name="colorPrimaryVariant">#1976D2</item> <!-- Daha tünd variant -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Toolbar yazı rəngi -->
+
+
+    </style>
+
+    <style name="Theme.MenzereRecylerView" parent="Base.Theme.MenzereRecylerView" />
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tekSatirManzara"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8sp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/imgManzara"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvManzaraBaslik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imgKopyala"
+        app:layout_constraintStart_toEndOf="@+id/imgManzara"
+        app:layout_constraintTop_toTopOf="@+id/imgManzara" />
+
+    <TextView
+        android:id="@+id/tvManzaraAciklama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgManzara"
+        app:layout_constraintEnd_toStartOf="@+id/imgSil"
+        app:layout_constraintStart_toEndOf="@+id/imgManzara"
+        app:layout_constraintTop_toBottomOf="@+id/tvManzaraBaslik" />
+
+    <ImageView
+        android:id="@+id/imgSil"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvManzaraAciklama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvManzaraAciklama"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/imgKopyala"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvManzaraBaslik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvManzaraBaslik"
+        app:srcCompat="@drawable/ic_make_copy" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
