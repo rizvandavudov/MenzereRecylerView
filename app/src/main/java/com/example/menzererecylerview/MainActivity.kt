@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         var linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerViewManzara.layoutManager = linearLayoutManager
 
-        val swipeGesture = object : SwipeGesture() {
+        val swipeGesture = object : SwipeGesture(this) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 when (direction) {
 
@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         itemTouchHelper.attachToRecyclerView(recyclerViewManzara)
 
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 

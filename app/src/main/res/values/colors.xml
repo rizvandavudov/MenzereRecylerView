@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#2196F3</color>
     <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="my_background">#F81302</color>
+    <color name="deletecolor">#F11100</color>
+    <color name="archiveColor">#00FC44</color>
 </resources>
